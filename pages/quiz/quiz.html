@@ -1,0 +1,131 @@
+<div ng-controller="quizController">
+	<div class="row">
+		<div class="progress">
+	  		<div class="progress-bar" role="progressbar" aria-valuenow="{{currentQuestion*100/totalQuestions}}" aria-valuemin="0" aria-valuemax="100" style="width:{{currentQuestion*100/totalQuestions}}%;">
+	    	{{currentQuestion*100/totalQuestions}}%
+	 		</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<nav>
+		  <ul class="pager">
+		    <li ng-if="currentQuestion > 0" ng-click="pagerClicked(-1)"><a>Previous</a></li>
+		    <li ng-if="currentQuestion < totalQuestions - 2 && currentQuestion != totalQuestions - 4" ng-click="pagerClicked(1)"><a>Next</a></li>
+		    <li ng-if="currentQuestion == totalQuestions - 1 || currentQuestion == totalQuestions - 2 || currentQuestion == totalQuestions - 4" ng-click="submitQuiz()"><a>Proceed to results</a></li>
+		  </ul>
+		</nav>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 yellow">
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 0">
+				<h2>Price range?</h2>
+				<p>Lower Value: {{formData.priceRange.low}}</p>
+				<p>Value 2: {{formData.priceRange.high}}</p>
+				<div range-slider floor="5" ceiling="200" dragstop="true" ng-model-low="formData.priceRange.low" ng-model-high="formData.priceRange.high">
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 1">
+				<h2>Red or white?</h2>
+				<form>
+					<div ng-class="formData.hasColorPreference.value === 'false' ? 'disabled' : ''">
+						<div>
+							Red
+						</div>
+						<div range-slider floor="0" ceiling="10" dragstop="true" ng-model-low="formData.colorPreference.red.low" ng-model-high="formData.colorPreference.red.high">
+						</div>
+						<div>
+							White
+						</div>
+						<div range-slider floor="0" ceiling="10" dragstop="true" ng-model-low="formData.colorPreference.white.low" ng-model-high="formData.colorPreference.white.high">
+						</div>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="hasColorPreference" ng-model="formData.hasColorPreference.value" ng-true-value="'false'" ng-false-value="'true'">No preference</label>
+					</div>
+				 </form>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 2">
+				<h2>What type of wine?</h2>
+				<div ng-class="formData.hasWineTypePreference.value === 'false' ? 'disabled' : ''">
+					<label><input type="checkbox" ng-model="formData.wineTypePreference.merlot" ng-true-value="'true'" ng-false-value="'false'">Merlot</label>
+					<label><input type="checkbox" ng-model="formData.wineTypePreference.zinfandel" ng-true-value="'true'" ng-false-value="'false'">Zinfandel</label>
+					<label><input type="checkbox" ng-model="formData.wineTypePreference.pinotNoir" ng-true-value="'true'" ng-false-value="'false'">Pinot Noir</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" name="hasWineTypePreference" ng-model="formData.hasWineTypePreference.value" ng-true-value="'false'" ng-false-value="'true'">No preference</label>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 3">
+				<h2>Where from?</h2>
+				<div ng-class="formData.hasWherePreference.value === 'false' ? 'disabled' : ''">
+					<label><input type="checkbox" ng-model="formData.wherePreference.argentina" ng-true-value="'true'" ng-false-value="'false'">Argentina</label>
+					<label><input type="checkbox" ng-model="formData.wherePreference.california" ng-true-value="'true'" ng-false-value="'false'">California</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" name="hasWherePreference" ng-model="formData.hasWherePreference.value" ng-true-value="'false'" ng-false-value="'true'">No preference</label>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 4">
+				<h2>Is this for a meal?</h2>
+				<div class="radio">
+				  <label><input type="radio" ng-model="formData.isForMeal.value" ng-value="'yes'" value="'yes'" name="forMeal">Yes</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" ng-model="formData.isForMeal.value" ng-value="'no'" value="'no'" name="forMeal">No</label>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 5">
+				<h2>What kind of ice cream do you like?</h2>
+				<div class="checkbox">
+				  <label><input type="checkbox" name="Chocolate" ng-model="formData.iceCreamPreference.chocolate" ng-true-value="'true'" ng-false-value="'false'">Chocolate</label>
+				  <label><input type="checkbox" name="Strawberry" ng-model="formData.iceCreamPreference.strawberry" ng-true-value="'true'" ng-false-value="'false'">Strawberry</label>
+				  <label><input type="checkbox" name="Fig" ng-model="formData.iceCreamPreference.fig" ng-true-value="'true'" ng-false-value="'false'">Fig</label>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 6">
+				<h2>How much do you sweeten your tea?</h2>
+				<div range-slider floor="0" ceiling="10" dragstop="true" ng-model-low="formData.sweetenPreference.low" ng-model-high="formData.sweetenPreference.high">
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 7">
+				<h2>What kind of smells do you like?</h2>
+				<label><input type="checkbox" ng-model="formData.smells.fire" ng-true-value="'true'" ng-false-value="'false'">Fire</label>
+				<label><input type="checkbox" ng-model="formData.smells.flowers" ng-true-value="'true'" ng-false-value="'false'">Flowers</label>
+				<label><input type="checkbox" ng-model="formData.smells.beach" ng-true-value="'true'" ng-false-value="'false'">Beach</label>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 8">
+				<h2>Is it for dinner or dessert?</h2>
+				<div class="radio">
+				  <label><input type="radio" ng-model="formData.mealType.value" ng-value="'dinner'" value="'dinner'" name="mealType">Dinner</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" ng-model="formData.mealType.value" ng-value="'dessert'" value="'dessert'" name="mealType">Dessert</label>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 9">
+				<h2>What kind of dinner?</h2>
+				<label><input type="checkbox" ng-model="formData.dinnerType.chicken" ng-true-value="'true'" ng-false-value="'false'">Chicken</label>
+				<label><input type="checkbox" ng-model="formData.dinnerType.fish" ng-true-value="'true'" ng-false-value="'false'">Fish</label>
+				<label><input type="checkbox" ng-model="formData.dinnerType.vegetables" ng-true-value="'true'" ng-false-value="'false'">Vegetables</label>
+			</div>
+
+			<div class="col-md-6 col-md-offset-1 pink" ng-if="currentQuestion == 10">
+				<h2>What kind of dessert?</h2>
+				<label><input type="checkbox" ng-model="formData.dessertType.cake" ng-true-value="'true'" ng-false-value="'false'">Cake</label>
+				<label><input type="checkbox" ng-model="formData.dessertType.fruit" ng-true-value="'true'" ng-false-value="'false'">Fruit</label>
+			</div>
+		</div>
+	</div>
+</div>
