@@ -99,7 +99,7 @@ wineApp.controller('learnController', function($scope) {
 wineApp.controller('quizController', function($scope, $location) {
     $scope.progress = 0;
     $scope.currentQuestion = 0;
-    $scope.totalQuestions = 11;
+    $scope.totalQuestions = 10;
     $scope.formData = {
         priceRange: {
             low: 5,
@@ -123,15 +123,15 @@ wineApp.controller('quizController', function($scope, $location) {
         },
         wineTypePreference: {
             merlot: 'false',
+            reisling: 'false',
+            chardonnay: 'false',
+            sauvignonblanc:'false',
+            cabernetsauvignon: 'false',
+            malbec: 'false',
             zinfandel: 'false',
-            pinotNoir: 'false'
-        },
-        hasWherePreference: {
-            value: 'true'
-        },
-        wherePreference: {
-            argentina: 'false',
-            california: 'false'
+            pinotnoir: 'false',
+            pinotgrigio: 'false',
+            moscato: 'false'
         },
         isForMeal: {
             value: 'yes'
@@ -173,20 +173,15 @@ wineApp.controller('quizController', function($scope, $location) {
             if ($scope.currentQuestion == 4) {
                 if ($scope.formData.hasWineTypePreference.value == 'false') {
                     if ($scope.formData.hasColorPreference.value == 'false') {
-                        if ($scope.formData.hasWherePreference.value == 'false') {
-                            $scope.currentQuestion = 1;
-                            return;
-                        } else {
-                            $scope.currentQuestion = 2;
-                            return;
-                        }
+                        $scope.currentQuestion = 2;
+                        return;
                     } else {
                         $scope.currentQuestion = 2;
                         return;
                     }    
                 }
-            } else if ($scope.currentQuestion == 8) {
-                $scope.currentQuestion = 4;
+            } else if ($scope.currentQuestion == 7) {
+                $scope.currentQuestion = 3;
                 return;
             }
 
@@ -198,18 +193,18 @@ wineApp.controller('quizController', function($scope, $location) {
             if ($scope.formData.hasColorPreference.value == 'false') {
                 $scope.formData.hasWineTypePreference.value = 'false';
                 $scope.formData.hasWherePreference.value = 'false';
-                $scope.currentQuestion = 4;
+                $scope.currentQuestion = 3;
                 return;
             }
         } else if ($scope.currentQuestion == 2) {
             if ($scope.formData.hasWineTypePreference.value == 'false') {
                 $scope.formData.hasWherePreference.value = 'false';
-                $scope.currentQuestion = 4;
+                $scope.currentQuestion = 3;
                 return;
             }
-        } else if ($scope.currentQuestion == 4) {
+        } else if ($scope.currentQuestion == 3) {
             if ($scope.formData.isForMeal.value == 'yes') {
-                $scope.currentQuestion = 8;
+                $scope.currentQuestion = 7;
                 return;
             }
         }

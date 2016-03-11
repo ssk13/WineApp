@@ -23,7 +23,7 @@
 .angular-range-slider div.bar .selection {
   width: 0;
   height: 100%;
-  background: rgb(99,20,1); 
+  background: rgb(99,20,1);
 }
 
 .angular-range-slider div.handle {
@@ -31,12 +31,13 @@
   width: 20px;
   height: 28px;
   top: -8px;
-  background-color: rgb(122,31,0);
+  background: rgb(99,20,1);
+  border-radius: 12px;
   z-index: 2;
 }
 
 .angular-range-slider div.handle.active {
-  background-color: rgb(206,122,83); 
+  background: rgb(99,20,1);
 }
 
 .angular-range-slider div.bubble {

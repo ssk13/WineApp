@@ -1,5 +1,15 @@
-a {
+a, a:hover {
 	cursor: pointer;
+	color: rgb(99,20,1);
+}
+
+table {
+	width: 100%;
+}
+
+.shadow-div {
+	box-shadow: 0px 0 10px #000000;
+	z-index: 1;
 }
 
 .banner {
@@ -24,9 +34,29 @@ a {
 	background-size: cover;
 }
 
+.logo {
+	height: 50px;
+}
+
 .navbar {
 	margin-bottom: 0;
 	border: none;
+}
+
+.progress-bar {
+	background-color: ;
+}
+
+.red-wine {
+	color: rgb(99,20,1);
+}
+
+.white-wine {
+	color: rgb(206,122,83);
+}
+
+.checkbox.active {
+	text-shadow: 1px 1px 1px #aaa;
 }
 
 .pink {
@@ -47,6 +77,18 @@ a {
 
 .black-text {
 	color: black;
+}
+
+.brown-text {
+	color: brown;
+}
+
+.green-text {
+	color: green;
+}
+
+.pink-text {
+	color: rgb(224,148,143);
 }
 
 .width-100-percent {
