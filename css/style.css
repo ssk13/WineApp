@@ -3,10 +3,6 @@ a, a:hover {
 	color: rgb(99,20,1);
 }
 
-table {
-	width: 100%;
-}
-
 .shadow-div {
 	box-shadow: 0px 0 10px #000000;
 	z-index: 1;
@@ -59,8 +55,20 @@ table {
 	text-shadow: 1px 1px 1px #aaa;
 }
 
+.glyphicon.active {
+	text-shadow: 3px 3px 3px rgb(99,20,1);
+}
+
+img.active {
+	box-shadow: 0px 0 15px rgb(99,20,1);
+}
+
 .pink {
 	background-color: rgb(224,148,143);
+}
+
+.light-pink {
+	background-color: rgb(255,179,174);
 }
 
 .dark-red {
@@ -91,15 +99,44 @@ table {
 	color: rgb(224,148,143);
 }
 
+.yellow-text {
+	color: rgb(206,122,83);
+}
+
 .width-100-percent {
 	width: 100%;
+}
+
+.round-corners {
+	border-radius: 10px;
 }
 
 .row {
 	margin: 0px;
 }
 
+.option-check {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 4em;
+    color: green;
+    display: none;
+}
+
+.option-check.active {
+	display: block;
+}
+
 .social-icon {
 	max-height: 80px;
 	cursor: pointer;
+}
+
+input[type="radio"] {
+	visibility: hidden;
+}
+
+.glyphicon-large {
+	font-size: 80px;
 }
