@@ -97,7 +97,7 @@ wineApp.controller('learnController', function($scope) {
 
 // create the controller and inject Angular's $scope
 wineApp.controller('quizController', function($scope, $location) {
-    $scope.progress = 0;
+    $scope.progressValues = [0, 14, 28, 42, 57, 71, 85, 70, 85, 85];
     $scope.currentQuestion = 0;
     $scope.totalQuestions = 10;
     $scope.formData = {
@@ -139,7 +139,7 @@ wineApp.controller('quizController', function($scope, $location) {
         iceCreamPreference: {
             chocolate: 'false',
             strawberry: 'false',
-            fig: 'false'
+            vanilla: 'false'
         },
         sweetenPreference: {
             low: 0,
@@ -170,10 +170,10 @@ wineApp.controller('quizController', function($scope, $location) {
 
     $scope.pagerClicked = function(value) {
         if (value == -1) {
-            if ($scope.currentQuestion == 4) {
+            if ($scope.currentQuestion == 3) {
                 if ($scope.formData.hasWineTypePreference.value == 'false') {
                     if ($scope.formData.hasColorPreference.value == 'false') {
-                        $scope.currentQuestion = 2;
+                        $scope.currentQuestion = 1;
                         return;
                     } else {
                         $scope.currentQuestion = 2;
@@ -183,29 +183,37 @@ wineApp.controller('quizController', function($scope, $location) {
             } else if ($scope.currentQuestion == 7) {
                 $scope.currentQuestion = 3;
                 return;
+            } else if ($scope.currentQuestion == 9) {
+                $scope.currentQuestion = 7;
+                return;
             }
 
             $scope.currentQuestion += value;
             return;
         }
 
-        if ($scope.currentQuestion == 1) {
-            if ($scope.formData.hasColorPreference.value == 'false') {
-                $scope.formData.hasWineTypePreference.value = 'false';
-                $scope.formData.hasWherePreference.value = 'false';
-                $scope.currentQuestion = 3;
-                return;
-            }
-        } else if ($scope.currentQuestion == 2) {
-            if ($scope.formData.hasWineTypePreference.value == 'false') {
-                $scope.formData.hasWherePreference.value = 'false';
-                $scope.currentQuestion = 3;
-                return;
-            }
-        } else if ($scope.currentQuestion == 3) {
-            if ($scope.formData.isForMeal.value == 'yes') {
-                $scope.currentQuestion = 7;
-                return;
+        else if (value == 1) {
+            if ($scope.currentQuestion == 1) {
+                if ($scope.formData.hasColorPreference.value == 'false') {
+                    $scope.formData.hasWineTypePreference.value = 'false';
+                    $scope.currentQuestion = 3;
+                    return;
+                }
+            } else if ($scope.currentQuestion == 2) {
+                if ($scope.formData.hasWineTypePreference.value == 'false') {
+                    $scope.currentQuestion = 3;
+                    return;
+                }
+            } else if ($scope.currentQuestion == 3) {
+                if ($scope.formData.isForMeal.value == 'yes') {
+                    $scope.currentQuestion = 7;
+                    return;
+                }
+            } else if ($scope.currentQuestion == 7) {
+                if ($scope.formData.mealType.value == 'dessert') {
+                    $scope.currentQuestion = 9;
+                    return;
+                }
             }
         }
         
