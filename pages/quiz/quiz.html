@@ -1,4 +1,4 @@
-<div ng-controller="quizController">
+<div>
 	<div class="row">
 		<div class="progress">
 	  		<div class="progress-bar yellow" role="progressbar" aria-valuenow="0" aria-valuemin="{{progressValues[currentQuestion]}}" aria-valuemax="100" style="width:{{progressValues[currentQuestion]}}%;">
@@ -54,15 +54,7 @@
 					<table class="width-100-percent">
 						<tr>
 							<td>
-								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.reisling === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.reisling" ng-true-value="'true'" ng-false-value="'false'">Reisling</label></div>
-							</td>
-							<td>
-								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.merlot === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.merlot" ng-true-value="'true'" ng-false-value="'false'">Merlot</label></div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.pinotgrigio === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.pinotgrigio" ng-true-value="'true'" ng-false-value="'false'">Pinot Grigio</label></div>
+								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.chardonnay === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.chardonnay" ng-true-value="'true'" ng-false-value="'false'">Chardonnay</label></div>
 							</td>
 							<td>
 								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.cabernetsauvignon === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.cabernetsauvignon" ng-true-value="'true'" ng-false-value="'false'">Cabernet Sauvignon</label></div>
@@ -70,10 +62,26 @@
 						</tr>
 						<tr>
 							<td>
-								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.chardonnay === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.chardonnay" ng-true-value="'true'" ng-false-value="'false'">Chardonnay</label></div>
+								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.pinotblanc === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.pinotblanc" ng-true-value="'true'" ng-false-value="'false'">Pinot Blanc</label></div>
 							</td>
 							<td>
 								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.malbec === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.malbec" ng-true-value="'true'" ng-false-value="'false'">Malbec</label></div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.pinotgrigio === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.pinotgrigio" ng-true-value="'true'" ng-false-value="'false'">Pinot Grigio</label></div>
+							</td>
+							<td>
+								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.merlot === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.merlot" ng-true-value="'true'" ng-false-value="'false'">Merlot</label></div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.reisling === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.reisling" ng-true-value="'true'" ng-false-value="'false'">Reisling</label></div>
+							</td>
+							<td>
+								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.pinotnoir === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.pinotnoir" ng-true-value="'true'" ng-false-value="'false'">Pinot Noir</label></div>
 							</td>
 						</tr>
 						<tr>
@@ -82,14 +90,6 @@
 							</td>
 							<td>
 								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.zinfandel === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.zinfandel" ng-true-value="'true'" ng-false-value="'false'">Zinfandel</label></div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="checkbox white-wine" ng-class="formData.wineTypePreference.moscato === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.moscato" ng-true-value="'true'" ng-false-value="'false'">Moscato</label></div>
-							</td>
-							<td>
-								<div class="checkbox red-wine" ng-class="formData.wineTypePreference.pinotnoir === 'true' ? 'active' : ''"><label><input type="checkbox" ng-model="formData.wineTypePreference.pinotnoir" ng-true-value="'true'" ng-false-value="'false'">Pinot Noir</label></div>
 							</td>
 						</tr>
 					</table>
@@ -103,15 +103,15 @@
 				<h2>Is this for a meal?</h2>
 				<div class="col-md-6">
 				  	<label class="clickable">
-				  		<input type="radio" ng-model="formData.isForMeal.value" ng-value="'yes'" value="'yes'" name="forMeal">
-				  			<span class="glyphicon glyphicon-thumbs-up glyphicon-large" ng-class="formData.isForMeal.value === 'yes' ? 'active' : ''" aria-hidden="true"></span>
+				  		<input type="radio" ng-model="formData.isForMeal.value" ng-value="'true'" value="'true'" name="forMeal">
+				  			<span class="glyphicon glyphicon-thumbs-up glyphicon-large" ng-class="formData.isForMeal.value === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
-				  		<input type="radio" ng-model="formData.isForMeal.value" ng-value="'no'" value="'no'" name="forMeal">
-				  			<span class="glyphicon glyphicon-thumbs-down glyphicon-large" ng-class="formData.isForMeal.value === 'no' ? 'active' : ''" aria-hidden="true"></span>
+				  		<input type="radio" ng-model="formData.isForMeal.value" ng-value="'false'" value="'false'" name="forMeal">
+				  			<span class="glyphicon glyphicon-thumbs-down glyphicon-large" ng-class="formData.isForMeal.value === 'false' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 			</div>

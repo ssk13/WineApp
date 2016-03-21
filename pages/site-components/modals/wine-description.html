@@ -2,7 +2,36 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <p>Description</p>
+        <div ng-if="wineTypeValue == 'cabernetsauvignon'">
+          <div ng-include src="'pages/wine-descriptions/cabernetsauvignon.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'chardonnay'">
+          <div ng-include src="'pages/wine-descriptions/chardonnay.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'malbec'">
+          <div ng-include src="'pages/wine-descriptions/malbec.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'merlot'">
+          <div ng-include src="'pages/wine-descriptions/merlot.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'pinotblanc'">
+          <div ng-include src="'pages/wine-descriptions/pinotblanc.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'pinotgrigio'">
+          <div ng-include src="'pages/wine-descriptions/pinotgrigio.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'pinotnoir'">
+          <div ng-include src="'pages/wine-descriptions/pinotnoir.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'reisling'">
+          <div ng-include src="'pages/wine-descriptions/reisling.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'sauvignonblanc'">
+          <div ng-include src="'pages/wine-descriptions/sauvignonblanc.html'"></div>
+        </div>
+        <div ng-if="wineTypeValue == 'zinfandel'">
+          <div ng-include src="'pages/wine-descriptions/zinfandel.html'"></div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

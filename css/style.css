@@ -1,19 +1,30 @@
+/*
+	HTML Components
+*/
+
 a, a:hover {
 	cursor: pointer;
 	color: rgb(99,20,1);
 }
 
-.shadow-div {
-	box-shadow: 0px 0 10px #000000;
-	z-index: 1;
+h3 {
+	color: rgb(99,20,1);
 }
 
-.banner {
-	width: 100%;
-	height: 350px;
-	background-image: url('../img/Banner.JPG');
-	background-position: center;
-	background-size: cover;
+img.active {
+	box-shadow: 0px 0 15px rgb(99,20,1);
+}
+
+input[type="radio"] {
+	visibility: hidden;
+}
+
+/*
+	Misc. Style
+*/
+
+.checkbox.active {
+	text-shadow: 1px 1px 1px #aaa;
 }
 
 .clickable {
@@ -24,11 +35,62 @@ a, a:hover {
 	opacity: 0.5;
 }
 
+.glyphicon.active {
+	text-shadow: 3px 3px 3px rgb(99,20,1);
+}
+
+.glyphicon-large {
+	font-size: 80px;
+}
+
+.option-check {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 4em;
+    color: green;
+    display: none;
+}
+
+.option-check.active {
+	display: block;
+}
+
+.round-corners {
+	border-radius: 10px;
+}
+
+.row {
+	margin: 0px;
+}
+
+.shadow-div {
+	box-shadow: 0px 0 10px #000000;
+	z-index: 1;
+}
+
+.social-icon {
+	max-height: 80px;
+	cursor: pointer;
+}
+
+.width-100-percent {
+	width: 100%;
+}
+
+/*
+	Home Page
+*/
+
 .infographic {
 	background-image: url('../img/infographic.png');
 	background-position: center;
 	background-size: cover;
 }
+
+/*
+	Nav Bar
+*/
 
 .logo {
 	height: 50px;
@@ -39,9 +101,34 @@ a, a:hover {
 	border: none;
 }
 
-.progress-bar {
-	background-color: ;
+/*
+	Recommendations
+*/
+
+.other-recommendation {
+    border: 1px solid rgb(224,148,143);
+    background-color: rgb(99,20,1);
+    color: white;
+    opacity: .5;
+    border-radius: 10px;
 }
+
+.other-recommendation:hover {
+    opacity: 1.0;
+}
+
+.result {
+	font-style: italic;
+}
+
+.wine-img {
+	width: 20%;
+	margin-left: 40%;
+}
+
+/*
+	Quiz
+*/
 
 .red-wine {
 	color: rgb(99,20,1);
@@ -51,28 +138,21 @@ a, a:hover {
 	color: rgb(206,122,83);
 }
 
-.checkbox.active {
-	text-shadow: 1px 1px 1px #aaa;
-}
+/*
+	Colors
+*/
 
-.glyphicon.active {
-	text-shadow: 3px 3px 3px rgb(99,20,1);
-}
 
-img.active {
-	box-shadow: 0px 0 15px rgb(99,20,1);
-}
-
-.pink {
-	background-color: rgb(224,148,143);
+.dark-red {
+	background-color: rgb(99,20,1);
 }
 
 .light-pink {
 	background-color: rgb(255,179,174);
 }
 
-.dark-red {
-	background-color: rgb(99,20,1);
+.pink {
+	background-color: rgb(224,148,143);
 }
 
 .red {
@@ -101,42 +181,4 @@ img.active {
 
 .yellow-text {
 	color: rgb(206,122,83);
-}
-
-.width-100-percent {
-	width: 100%;
-}
-
-.round-corners {
-	border-radius: 10px;
-}
-
-.row {
-	margin: 0px;
-}
-
-.option-check {
-	position: absolute;
-    top: 0px;
-    left: 0px;
-    font-size: 4em;
-    color: green;
-    display: none;
-}
-
-.option-check.active {
-	display: block;
-}
-
-.social-icon {
-	max-height: 80px;
-	cursor: pointer;
-}
-
-input[type="radio"] {
-	visibility: hidden;
-}
-
-.glyphicon-large {
-	font-size: 80px;
 }
