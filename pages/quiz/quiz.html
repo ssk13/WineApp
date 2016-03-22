@@ -34,13 +34,11 @@
 						<div>
 							Red
 						</div>
-						<div range-slider floor="0" ceiling="10" dragstop="true" ng-model-low="formData.colorPreference.red.low" ng-model-high="formData.colorPreference.red.high">
-						</div>
+						<div range-slider floor="0" ceiling="10" highlight="left" ng-model="formData.colorPreference.red.value"></div>
 						<div>
 							White
 						</div>
-						<div range-slider floor="0" ceiling="10" dragstop="true" ng-model-low="formData.colorPreference.white.low" ng-model-high="formData.colorPreference.white.high">
-						</div>
+						<div range-slider floor="0" ceiling="10" highlight="left" ng-model="formData.colorPreference.white.value"></div>
 					</div>
 					<div class="checkbox" ng-class="formData.hasColorPreference.value === 'false' ? 'active' : ''">
 					  <label><input type="checkbox" name="hasColorPreference" ng-model="formData.hasColorPreference.value" ng-true-value="'false'" ng-false-value="'true'">No preference</label>
@@ -147,8 +145,7 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 5">
 				<h2>How much do you sweeten your tea?</h2>
-				<div range-slider floor="0" ceiling="10" dragstop="true" ng-model-low="formData.sweetenPreference.low" ng-model-high="formData.sweetenPreference.high">
-				</div>
+				<div range-slider floor="0" ceiling="10" highlight="left" ng-model="formData.sweetenPreference.value"></div>
 			</div>
 
 			<div class="col-md-12" ng-if="currentQuestion == 6">

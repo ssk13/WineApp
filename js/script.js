@@ -72,12 +72,10 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
             },
             colorPreference: {
                 red: {
-                    low: 0,
-                    high: 10
+                    value: 10
                 },
                 white: {
-                    low: 0,
-                    high: 10
+                    value: 10
                 }
             },
             hasWineTypePreference: {
@@ -104,8 +102,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 vanilla: 'false'
             },
             sweetenPreference: {
-                low: 0,
-                high: 10
+                value: 10
             },
             smells: {
                 fire: 'false',

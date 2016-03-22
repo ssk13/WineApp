@@ -11,8 +11,8 @@
 		  	</div>
 		  	<div ng-if="formData.hasColorPreference.value == 'true'">
 		    	<h4>Color Preference: </h4>
-		    	<span>Red: </span><span class="result">{{formData.colorPreference.red.low}} - {{formData.colorPreference.red.high}}</span><br>
-		    	<span>White: </span><span class="result">{{formData.colorPreference.white.low}} - {{formData.colorPreference.white.high}}</span>
+		    	<span>Red: </span><span class="result">{{formData.colorPreference.red.value}}</span><br>
+		    	<span>White: </span><span class="result">{{formData.colorPreference.white.value}</span>
 		  	</div>
 		  	<div ng-if="formData.hasWineTypePreference.value == 'true'">
 		    	<h4>Preferred Wine Types: </h4>
@@ -65,7 +65,7 @@
 		    	<span ng-if="formData.iceCreamPreference.vanilla == 'true'" class="result">Vanilla</span>
 		    	<span ng-if="formData.iceCreamPreference.strawberry == 'true'" class="result">Strawberry</span>
 		    	<h4>Sweetening Preference: </h4>
-		    	<span class="result">{{formData.sweetenPreference.low}} - {{formData.sweetenPreference.high}}</span>
+		    	<span class="result">{{formData.sweetenPreference.value}}</span>
 		    	<h4>Preferred Smells: </h4>
 		    	<span ng-if="formData.smells.fire == 'true'" class="result">Fire</span>
 		    	<span ng-if="formData.smells.flowers == 'true'" class="result">Flowers</span>
