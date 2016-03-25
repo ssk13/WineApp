@@ -1,8 +1,8 @@
 <div>
 	<div class="row">
 		<div class="progress">
-	  		<div class="progress-bar yellow" role="progressbar" aria-valuenow="0" aria-valuemin="{{progressValues[currentQuestion]}}" aria-valuemax="100" style="width:{{progressValues[currentQuestion]}}%;">
-	    	{{progressValues[currentQuestion]}}%
+	  		<div class="progress-bar yellow" role="progressbar" aria-valuenow="0" aria-valuemin="{{progressValues[currentQuestion - 1]}}" aria-valuemax="100" style="width:{{progressValues[currentQuestion - 1]}}%;">
+	    	{{progressValues[currentQuestion - 1]}}%
 	 		</div>
 		</div>
 	</div>
@@ -10,22 +10,15 @@
 	<div class="row">
 		<nav class="col-md-6 col-md-offset-3">
 		  <ul class="pager">
-		    <li class="pull-left" ng-if="currentQuestion > 0" ng-click="pagerClicked(-1)"><a><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a></li>
-		    <li class="pull-right" ng-if="currentQuestion < totalQuestions - 2 && currentQuestion != totalQuestions - 4" ng-click="pagerClicked(1)"><a>Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
-		    <li class="pull-right" ng-if="currentQuestion == totalQuestions - 1 || currentQuestion == totalQuestions - 2 || currentQuestion == totalQuestions - 4" ng-click="submitQuiz()"><a>Proceed to results<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
+		    <li class="pull-left" ng-if="currentQuestion > 1" ng-click="pagerClicked(-1)"><a><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a></li>
+		    <li class="pull-right" ng-if="currentQuestion != 11" ng-click="pagerClicked(1)"><a>Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
+		    <li class="pull-right" ng-if="currentQuestion == 11" ng-click="submitQuiz()"><a>Proceed to results<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></li>
 		  </ul>
 		</nav>
 	</div>
 
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 light-pink round-corners">
-
-			<div class="col-md-12" ng-if="currentQuestion == 0">
-				<h2>What is your price range?</h2>
-				<div range-slider floor="5" ceiling="200" dragstop="true" ng-model-low="formData.priceRange.low" ng-model-high="formData.priceRange.high">
-				</div>
-				<p>Current: ${{formData.priceRange.low}} - ${{formData.priceRange.high}}</p>
-			</div>
 
 			<div class="col-md-12" ng-if="currentQuestion == 1">
 				<h2>Do you prefer red or white wine?</h2>
@@ -198,7 +191,7 @@
 			<div class="col-md-12" ng-if="currentQuestion == 8">
 				<h2>What kind of dinner?</h2>
 
-				<div class="col-md-4">
+				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.chicken === 'true' ? 'active' : ''"src="../../img/chicken.jpg">
 				  		<input type="checkbox" ng-model="formData.dinnerType.chicken" ng-true-value="'true'" ng-false-value="'false'">Chicken
@@ -206,7 +199,7 @@
 				  	</label>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.fish === 'true' ? 'active' : ''"src="../../img/fish.jpg">
 				  		<input type="checkbox" ng-model="formData.dinnerType.fish" ng-true-value="'true'" ng-false-value="'false'">Fish
@@ -214,7 +207,15 @@
 				  	</label>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<img class="width-100-percent" ng-class="formData.dinnerType.beef === 'true' ? 'active' : ''"src="../../img/beef.jpg">
+				  		<input type="checkbox" ng-model="formData.dinnerType.beef" ng-true-value="'true'" ng-false-value="'false'">Beef
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.beef === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.vegetables === 'true' ? 'active' : ''"src="../../img/vegetables.jpg">
 				  		<input type="checkbox" ng-model="formData.dinnerType.vegetables" ng-true-value="'true'" ng-false-value="'false'">Vegetables
@@ -222,9 +223,62 @@
 				  	</label>
 				</div>
 
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<img class="width-100-percent" ng-class="formData.dinnerType.pasta === 'true' ? 'active' : ''"src="../../img/pasta.jpg">
+				  		<input type="checkbox" ng-model="formData.dinnerType.pasta" ng-true-value="'true'" ng-false-value="'false'">Pasta
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.pasta === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<img class="width-100-percent" ng-class="formData.dinnerType.cheese === 'true' ? 'active' : ''"src="../../img/cheese.jpg">
+				  		<input type="checkbox" ng-model="formData.dinnerType.cheese" ng-true-value="'true'" ng-false-value="'false'">Cheese
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.cheese === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
 			</div>
 
 			<div class="col-md-12" ng-if="currentQuestion == 9">
+				<h2>What kind of cheese?</h2>
+
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
+				  		<input type="checkbox" ng-model="formData.cheeseType.bloomy" ng-true-value="'true'" ng-false-value="'false'">Bloomy (creamy cheese, like Brie)
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
+				  		<input type="checkbox" ng-model="formData.cheeseType.hard" ng-true-value="'true'" ng-false-value="'false'">Hard (Cheddar, Parmesagn, Gouda)
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.hard === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
+				  		<input type="checkbox" ng-model="formData.cheeseType.blue" ng-true-value="'true'" ng-false-value="'false'">Blue (like Gorgonzola)
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.blue === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+				<div class="col-md-6">
+				  	<label class="clickable">
+				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
+				  		<input type="checkbox" ng-model="formData.cheeseType.fresh" ng-true-value="'true'" ng-false-value="'false'">Fresh (Ricotta, Mozzarella, Goat, Feta)
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.fresh === 'true' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+			</div>
+
+			<div class="col-md-12" ng-if="currentQuestion == 10">
 				<h2>What kind of dessert?</h2>
 
 				<div class="col-md-6">
@@ -243,6 +297,13 @@
 				  	</label>
 				</div>
 
+			</div>
+
+			<div class="col-md-12" ng-if="currentQuestion == 11">
+				<h2>What is your price range?</h2>
+				<div range-slider floor="5" ceiling="40" dragstop="true" ng-model-low="formData.priceRange.low" ng-model-high="formData.priceRange.high">
+				</div>
+				<p>Current: ${{formData.priceRange.low}} - ${{formData.priceRange.high}}</p>
 			</div>
 		</div>
 	</div>

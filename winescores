@@ -1,0 +1,129 @@
+merlot
+		+1 for liking red
+		+2 for really liking red
+		-1 for disliking red
+		-2 for really disliking red
+		+1 for pairing with hard cheese
+		+1 for pairing with beef
+		+1 for pairing with pasta
+		+1 for pairing with chicken
+		+1 for pairing with cake
+		+1 for liking the smell of flowers
+		+1 for liking chocolate
+		+1 for pairing with fresh cheese
+reisling
+		+1 for liking white
+		+2 for really liking white
+		-1 for disliking white
+		-2 for really disliking white
+		+1 for pairing with blue cheese
+		+1 for having price range high above 30
+		-1 for having price range low below 10
+		+1 for liking the smell of flowers
+		+1 for pairing with seafood
+		+1 for pairing with cake
+		+1 for pairing with pasta
+		+1 for pairing with vegetables
+		+1 for liking strawberry
+		+1 for pairing with bloomy cheese
+chardonnay
+		+1 for liking white
+		+2 for really liking white
+		-1 for disliking white
+		-2 for really disliking white
+		+1 for pairing with bloomy cheese
+		+1 for having low sweetness preference
+		-1 for having high sweetness preference
+		+1 for pairing with fruit
+		+1 for having price range low below 10
+		-1 for having price range high above 30
+		+1 for pairing with chicken
+		+1 for pairing with fish
+		+1 for pairing with vegetables
+		+1 for liking the smell of flowers
+		+1 for liking strawberry
+		+1 for pairin with hard cheese
+sauvignon blanc
+		+1 for liking white
+		+2 for really liking white
+		-1 for disliking white
+		-2 for really disliking white
+		+1 for pairing with hard cheese
+		+1 for pairing with fruit
+		+1 for pairing with seafood
+		+1 for pairing with vegetables
+		+1 for pairing with chicken
+		+1 for liking strawberry
+		+1 for pairing with fresh cheese
+		+1 for liking the smell of flowers
+cabernet sauvignon
+		+1 for liking red
+		+2 for really liking red
+		-1 for disliking red
+		-2 for really disliking red
+		+1 for pairing with beef
+		+1 for pairing with bloomy cheese
+		+1 for pairing with hard cheese
+		+1 for pairing with cake
+		+1 for liking vanilla
+		+1 for liking the smell of fire
+		+1 for having low sweetness preference
+		-1 for having high sweetness preference
+		+1 for pairing with chicken
+		+1 for pairing with pasta
+malbec
+		+1 for liking red
+		+2 for really liking red
+		-1 for disliking red
+		-2 for really disliking red
+		+1 for pairing with chicken
+		+1 for liking cake
+		+1 for pairing with beef
+		+1 for pairing with pasta
+		+1 for liking the smell of fire
+		+1 for liking chocolate
+		+1 for pairing with hard cheese
+zinfandel
+		[+1 for liking red
+		+2 for really liking red
+		-1 for disliking red
+		-2 for really disliking red]
+		+2 for pairing with hard cheese
+		+1 for liking the smell of fire
+		+2 for pairing with beef
+		+1 for pairing with chicken
+		+1 for pairing with pasta
+		+1 for liking chocolate
+pinot noir
+		[+1 for liking red
+		+2 for really liking red
+		-1 for disliking red
+		-2 for really disliking red]
+		+2 for pairing with hard cheese
+		+1 for liking vanilla
+		+1 for liking the smell of fire
+		+2 for pairing with pasta
+		+1 for pairing with beef
+		+1 for pairing with cake
+pinot grigio
+		[+1 for liking white
+		+2 for really liking white
+		-1 for disliking white
+		-2 for really disliking white]
+		+2 for pairing with fresh cheese
+		+1 for liking the smell of the beach
+		+2 for pairing with chicken
+		+1 for pairing with vegetables
+		+1 for liking strawberry
+		+1 for pairing with fruit
+pinot blanc
+		[+1 for liking white
+		+2 for really liking white
+		-1 for disliking white
+		-2 for really disliking white]
+		+2 for pairing with bloomy cheese
+		+2 for pairing with vegetables
+		+1 for pairing with chicken
+		+1 for pairing with fruit
+		+1 for liking vanilla
+		+1 for liking the smell of flowers
