@@ -510,8 +510,7 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
             }
         }
 
-        $rootScope.wineRecommendations = [wine1, wine2, wine3, wine4];   
-        $scope.setWineDescriptionString($rootScope.wineRecommendations[0]);     
+        $rootScope.wineRecommendations = [wine1, wine2, wine3, wine4];      
 
         $location.path( "/results" );
     };
