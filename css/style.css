@@ -8,9 +8,7 @@ a, a:hover {
 }
 
 body {
-	background-image: url('../img/background.JPG');
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #666;
 }
 
 h3 {
@@ -21,13 +19,24 @@ img.active {
 	box-shadow: 0px 0 15px rgb(99,20,1);
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"].hidden-checkbox {
 	visibility: hidden;
+}
+
+li {
+	font-size: 16px;
 }
 
 /*
 	Misc. Style
 */
+
+.button {
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
 
 .checkbox.active {
 	text-shadow: 1px 1px 1px #aaa;
@@ -149,6 +158,10 @@ input[type="radio"] {
 */
 
 
+.black {
+	background-color: black;
+}
+
 .dark-red {
 	background-color: rgb(99,20,1);
 }
@@ -183,6 +196,10 @@ input[type="radio"] {
 
 .pink-text {
 	color: rgb(224,148,143);
+}
+
+.white-text {
+	color: white;
 }
 
 .yellow-text {

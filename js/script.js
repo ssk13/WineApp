@@ -144,6 +144,76 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
             pinotblanc: 0
         };
         $rootScope.wineRecommendations = [];
+        $rootScope.hasTasteProfile = 'false';
+        $rootScope.tasteProfile = {
+            priceRange: {
+                low: 5,
+                high: 40
+            },
+            hasColorPreference: {
+                value: 'true'
+            },
+            colorPreference: {
+                red: {
+                    value: 10
+                },
+                white: {
+                    value: 10
+                }
+            },
+            hasWineTypePreference: {
+                value: 'true'
+            },
+            wineTypePreference: {
+                merlot: 'false',
+                reisling: 'false',
+                chardonnay: 'false',
+                sauvignonblanc:'false',
+                cabernetsauvignon: 'false',
+                malbec: 'false',
+                zinfandel: 'false',
+                pinotnoir: 'false',
+                pinotgrigio: 'false',
+                pinotblanc: 'false'
+            },
+            isForMeal: {
+                value: 'true'
+            },
+            iceCreamPreference: {
+                chocolate: 'false',
+                strawberry: 'false',
+                vanilla: 'false'
+            },
+            sweetenPreference: {
+                value: 10
+            },
+            smells: {
+                fire: 'false',
+                flowers: 'false',
+                beach: 'false'
+            },
+            mealType: {
+                value: 'dinner'
+            },
+            dinnerType: {
+                chicken: 'false',
+                fish: 'false',
+                beef: 'false',
+                vegetables: 'false',
+                pasta: 'false',
+                cheese: 'false'
+            },
+            dessertType: {
+                cake: 'false',
+                fruit: 'false'
+            },
+            cheeseType: {
+                bloomy: 'false',
+                hard: 'false',
+                blue: 'false',
+                fresh: 'false'
+            }
+        };
 
         $scope.logIn = function() {
             $rootScope.isLoggedIn = true;
@@ -155,6 +225,10 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
             $rootScope.isLoggedIn = false;
             $location.path("/home");
         };
+
+        $scope.routeTo = function(value) {
+            $location.path(value);
+        }
     }
 ]);
 
@@ -510,7 +584,11 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
             }
         }
 
-        $rootScope.wineRecommendations = [wine1, wine2, wine3, wine4];      
+        $rootScope.wineRecommendations = [wine1, wine2, wine3, wine4];
+        if ($rootScope.isLoggedIn == true) {
+            $rootScope.hasTasteProfile = 'true';
+            $rootScope.tasteProfile = $rootScope.formData;
+        }      
 
         $location.path( "/results" );
     };

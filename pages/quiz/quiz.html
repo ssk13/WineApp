@@ -41,6 +41,7 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 2">
 				<h2>What type of wines do you like?</h2>
+				<h5>(You may pick more than one)</h5>
 				<div ng-class="formData.hasWineTypePreference.value === 'false' ? 'disabled' : ''">
 					<table class="width-100-percent">
 						<tr>
@@ -109,28 +110,28 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 4">
 				<h2>What kind of ice cream do you like?</h2>
+				<h5>(You may pick more than one)</h5>
 
 				<div class="col-md-4 brown-text">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.iceCreamPreference.chocolate === 'true' ? 'active' : ''" src="../../img/chocolate.png">
-				  		<input type="checkbox" ng-model="formData.iceCreamPreference.chocolate" ng-true-value="'true'" ng-false-value="'false'">Chocolate
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.iceCreamPreference.chocolate" ng-true-value="'true'" ng-false-value="'false'"><p>Chocolate</p>
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.iceCreamPreference.chocolate === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
-				  	
 				</div>
 
-				<div class="col-md-4 yellow-text">
+				<div class="col-md-4 brown-text">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.iceCreamPreference.vanilla === 'true' ? 'active' : ''" src="../../img/vanilla.png">
-				  		<input type="checkbox" ng-model="formData.iceCreamPreference.vanilla" ng-true-value="'true'" ng-false-value="'false'">Vanilla
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.iceCreamPreference.vanilla" ng-true-value="'true'" ng-false-value="'false'"><p>Vanilla</p>
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.iceCreamPreference.vanilla === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 
-				<div class="col-md-4 pink-text">
+				<div class="col-md-4 brown-text">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.iceCreamPreference.strawberry === 'true' ? 'active' : ''" src="../../img/strawberry.png">
-				  		<input type="checkbox" ng-model="formData.iceCreamPreference.strawberry" ng-true-value="'true'" ng-false-value="'false'">Strawberry
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.iceCreamPreference.strawberry" ng-true-value="'true'" ng-false-value="'false'"><p>Strawberry</p>
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.iceCreamPreference.strawberry === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -143,11 +144,12 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 6">
 				<h2>What kind of smells do you like?</h2>
+				<h5>(You may pick more than one)</h5>
 
 				<div class="col-md-4">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.smells.fire === 'true' ? 'active' : ''"src="../../img/fire.jpg">
-				  		<input type="checkbox" ng-model="formData.smells.fire" ng-true-value="'true'" ng-false-value="'false'">Fire
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.smells.fire" ng-true-value="'true'" ng-false-value="'false'"><p>Fire</p>
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.smells.fire === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -155,7 +157,7 @@
 				<div class="col-md-4">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.smells.flowers === 'true' ? 'active' : ''"src="../../img/flowers.jpg">
-				  		<input type="checkbox" ng-model="formData.smells.flowers" ng-true-value="'true'" ng-false-value="'false'">Flowers
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.smells.flowers" ng-true-value="'true'" ng-false-value="'false'"><p>Flowers</p>
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.smells.flowers === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -163,7 +165,7 @@
 				<div class="col-md-4">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.smells.beach === 'true' ? 'active' : ''"src="../../img/beach.jpg">
-				  		<input type="checkbox" ng-model="formData.smells.beach" ng-true-value="'true'" ng-false-value="'false'">Beach
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.smells.beach" ng-true-value="'true'" ng-false-value="'false'"><p>Beaches</p>
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.smells.beach === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -190,11 +192,12 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 8">
 				<h2>What kind of dinner?</h2>
+				<h5>(You may pick more than one)</h5>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.chicken === 'true' ? 'active' : ''"src="../../img/chicken.jpg">
-				  		<input type="checkbox" ng-model="formData.dinnerType.chicken" ng-true-value="'true'" ng-false-value="'false'">Chicken
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.chicken" ng-true-value="'true'" ng-false-value="'false'">Chicken
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.chicken === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -202,7 +205,7 @@
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.fish === 'true' ? 'active' : ''"src="../../img/fish.jpg">
-				  		<input type="checkbox" ng-model="formData.dinnerType.fish" ng-true-value="'true'" ng-false-value="'false'">Fish
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.fish" ng-true-value="'true'" ng-false-value="'false'">Fish
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.fish === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -210,7 +213,7 @@
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.beef === 'true' ? 'active' : ''"src="../../img/beef.jpg">
-				  		<input type="checkbox" ng-model="formData.dinnerType.beef" ng-true-value="'true'" ng-false-value="'false'">Beef
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.beef" ng-true-value="'true'" ng-false-value="'false'">Beef
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.beef === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -218,7 +221,7 @@
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.vegetables === 'true' ? 'active' : ''"src="../../img/vegetables.jpg">
-				  		<input type="checkbox" ng-model="formData.dinnerType.vegetables" ng-true-value="'true'" ng-false-value="'false'">Vegetables
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.vegetables" ng-true-value="'true'" ng-false-value="'false'">Vegetables
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.vegetables === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -226,7 +229,7 @@
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.pasta === 'true' ? 'active' : ''"src="../../img/pasta.jpg">
-				  		<input type="checkbox" ng-model="formData.dinnerType.pasta" ng-true-value="'true'" ng-false-value="'false'">Pasta
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.pasta" ng-true-value="'true'" ng-false-value="'false'">Pasta
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.pasta === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -234,7 +237,7 @@
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.cheese === 'true' ? 'active' : ''"src="../../img/cheese.jpg">
-				  		<input type="checkbox" ng-model="formData.dinnerType.cheese" ng-true-value="'true'" ng-false-value="'false'">Cheese
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.cheese" ng-true-value="'true'" ng-false-value="'false'">Cheese
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.cheese === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -243,35 +246,36 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 9">
 				<h2>What kind of cheese?</h2>
+				<h5>(You may pick more than one)</h5>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
-				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
-				  		<input type="checkbox" ng-model="formData.cheeseType.bloomy" ng-true-value="'true'" ng-false-value="'false'">Bloomy (creamy cheese, like Brie)
+				  		<img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/brie.jpg"-->
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.cheeseType.bloomy" ng-true-value="'true'" ng-false-value="'false'">Bloomy (creamy cheese, like Brie)
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
-				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
-				  		<input type="checkbox" ng-model="formData.cheeseType.hard" ng-true-value="'true'" ng-false-value="'false'">Hard (Cheddar, Parmesagn, Gouda)
+				  		<img class="width-100-percent" ng-class="formData.cheeseType.hard === 'true' ? 'active' : ''"src="../../img/cheddar.jpg">
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.cheeseType.hard" ng-true-value="'true'" ng-false-value="'false'">Hard (Cheddar, Parmesagn, Gouda)
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.hard === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
-				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
-				  		<input type="checkbox" ng-model="formData.cheeseType.blue" ng-true-value="'true'" ng-false-value="'false'">Blue (like Gorgonzola)
+				  		<img class="width-100-percent" ng-class="formData.cheeseType.blue === 'true' ? 'active' : ''"src="../../img/gorgonzola.jpg">
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.cheeseType.blue" ng-true-value="'true'" ng-false-value="'false'">Blue (like Gorgonzola)
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.blue === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
-				  		<!--img class="width-100-percent" ng-class="formData.cheeseType.bloomy === 'true' ? 'active' : ''"src="../../img/chicken.jpg"-->
-				  		<input type="checkbox" ng-model="formData.cheeseType.fresh" ng-true-value="'true'" ng-false-value="'false'">Fresh (Ricotta, Mozzarella, Goat, Feta)
+				  		<img class="width-100-percent" ng-class="formData.cheeseType.fresh === 'true' ? 'active' : ''"src="../../img/ricotta.jpg">
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.cheeseType.fresh" ng-true-value="'true'" ng-false-value="'false'">Fresh (Ricotta, Mozzarella, Goat, Feta)
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.cheeseType.fresh === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -280,11 +284,12 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 10">
 				<h2>What kind of dessert?</h2>
+				<h5>(You may pick more than one)</h5>
 
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dessertType.cake === 'true' ? 'active' : ''"src="../../img/cake.jpg">
-				  		<input type="checkbox" ng-model="formData.dessertType.cake" ng-true-value="'true'" ng-false-value="'false'">Cake
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dessertType.cake" ng-true-value="'true'" ng-false-value="'false'">Cake
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dessertType.cake === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
@@ -292,7 +297,7 @@
 				<div class="col-md-6">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.dessertType.fruit === 'true' ? 'active' : ''"src="../../img/fruit.jpg">
-				  		<input type="checkbox" ng-model="formData.dessertType.fruit" ng-true-value="'true'" ng-false-value="'false'">Fruit
+				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dessertType.fruit" ng-true-value="'true'" ng-false-value="'false'">Fruit
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dessertType.fruit === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
