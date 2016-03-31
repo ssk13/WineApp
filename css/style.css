@@ -117,6 +117,7 @@ input[type="radio"] {
     background-color: rgb(99,20,1);
     color: white;
     border-radius: 10px;
+    text-align: center;
 }
 
 .other-recommendation:hover {
@@ -130,6 +131,10 @@ input[type="radio"] {
 .wine-img {
 	width: 20%;
 	margin-left: 40%;
+}
+
+.wineA {
+	width: 100%;
 }
 
 /*

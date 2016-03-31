@@ -145,6 +145,11 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
         };
         $rootScope.wineRecommendations = [];
 
+        $scope.changeWineTypeValue = function(value) {
+            $rootScope.wineTypeValue = value;
+            return;
+        };
+
         $scope.logIn = function() {
             $rootScope.isLoggedIn = true;
             $location.path("/home");
@@ -513,11 +518,6 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
         $rootScope.wineRecommendations = [wine1, wine2, wine3, wine4];      
 
         $location.path( "/results" );
-    };
-
-    $scope.changeWineTypeValue = function(value) {
-        $rootScope.wineTypeValue = value;
-        return;
     };
 
     $scope.toString = function (value) {
