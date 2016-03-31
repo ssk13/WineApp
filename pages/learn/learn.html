@@ -1,1 +1,78 @@
 <h1>Learn about wine</h1>
+
+
+<div class = "row" >
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('cabernetsauvignon')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Cabernet Sauvignon</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('chardonnay')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Chardonnay</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('malbec')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Malbec</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('merlot')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Merlot</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('pinotblanc')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Pinot Blanc</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('pinotgrigio')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Pinto Grigio</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('pinotnoir')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Pinto Noir</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('reisling')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Reisling</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('sauvignonblanc')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Sauvignon Blanc</h4>
+		</div>
+	</div>
+
+	<div class = "col-md-2">
+		<img class = "wineA" src = "../../img/redwine.PNG">
+		<div ng-click="changeWineTypeValue('zinfandel')" class="clickable other-recommendation" data-toggle="modal" data-target="#wine-description">
+			<h4>Zinfandel</h4>
+		</div>
+	</div>
+
+</div>
+
+<div ng-include src="'pages/site-components/modals/wine-description.html'"></div>
