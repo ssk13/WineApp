@@ -248,24 +248,14 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
 
     $scope.pagerClicked = function(value) {
         if (value == -1) {
-            if ($scope.currentQuestion == 3) {
-                if ($rootScope.formData.hasWineTypePreference.value == 'false') {
-                    if ($rootScope.formData.hasColorPreference.value == 'false') {
-                        $scope.currentQuestion = 1;
-                        return;
-                    } else {
-                        $scope.currentQuestion = 2;
-                        return;
-                    }    
-                }
-            } else if ($scope.currentQuestion == 7) {
+            if ($scope.currentQuestion == 7) {
                 $scope.currentQuestion = 3;
                 return;
             } else if ($scope.currentQuestion == 10) {
                 $scope.currentQuestion = 7;
                 return;
             } else if ($scope.currentQuestion == 11) {
-                if ($rootScope.formData.mealType.value == 'dinner') {
+                if ($rootScope.formData.isForMeal.value == 'true') {
                     if ($rootScope.formData.dinnerType.cheese == 'true') {
                         $scope.currentQuestion = 9;
                         return;
@@ -273,6 +263,9 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
                         $scope.currentQuestion = 8;
                         return;
                     }
+                } else {
+                    $scope.currentQuestion = 6;
+                    return;
                 }
             }
 
@@ -281,12 +274,7 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
         }
 
         else if (value == 1) {
-            if ($scope.currentQuestion == 2) {
-                if ($rootScope.formData.hasWineTypePreference.value == 'false') {
-                    $scope.currentQuestion = 3;
-                    return;
-                }
-            } else if ($scope.currentQuestion == 3) {
+            if ($scope.currentQuestion == 3) {
                 if ($rootScope.formData.isForMeal.value == 'true') {
                     $scope.currentQuestion = 7;
                     return;
