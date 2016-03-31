@@ -72,6 +72,14 @@ li {
 	font-size: 80px;
 }
 
+.margin-top-40 {
+	margin-top: 40px;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
 .option-check {
 	position: absolute;
     top: 0px;
@@ -97,6 +105,7 @@ li {
 .shadow-div {
 	box-shadow: 0px 0 10px #000000;
 	z-index: 1;
+	color: white;
 }
 
 .social-icon {
@@ -163,6 +172,11 @@ li {
 /*
 	Quiz
 */
+
+.slider-subtitle {
+	font-weight: 900;
+	font-size: 12px;
+}
 
 .red-wine {
 	color: rgb(99,20,1);

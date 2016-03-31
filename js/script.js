@@ -64,18 +64,18 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
         $rootScope.wineTypeValue = '';
         $rootScope.formData = {
             priceRange: {
-                low: 5,
-                high: 40
+                low: 18,
+                high: 27
             },
             hasColorPreference: {
                 value: 'true'
             },
             colorPreference: {
                 red: {
-                    value: 10
+                    value: 5
                 },
                 white: {
-                    value: 10
+                    value: 5
                 }
             },
             hasWineTypePreference: {
@@ -94,7 +94,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 pinotblanc: 'false'
             },
             isForMeal: {
-                value: 'true'
+                value: ''
             },
             iceCreamPreference: {
                 chocolate: 'false',
@@ -102,7 +102,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 vanilla: 'false'
             },
             sweetenPreference: {
-                value: 10
+                value: 5
             },
             smells: {
                 fire: 'false',
@@ -110,7 +110,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 beach: 'false'
             },
             mealType: {
-                value: 'dinner'
+                value: ''
             },
             dinnerType: {
                 chicken: 'false',
@@ -147,18 +147,18 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
         $rootScope.hasTasteProfile = 'false';
         $rootScope.tasteProfile = {
             priceRange: {
-                low: 5,
-                high: 40
+                low: 18,
+                high: 27
             },
             hasColorPreference: {
                 value: 'true'
             },
             colorPreference: {
                 red: {
-                    value: 10
+                    value: 5
                 },
                 white: {
-                    value: 10
+                    value: 5
                 }
             },
             hasWineTypePreference: {
@@ -177,7 +177,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 pinotblanc: 'false'
             },
             isForMeal: {
-                value: 'true'
+                value: ''
             },
             iceCreamPreference: {
                 chocolate: 'false',
@@ -185,7 +185,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 vanilla: 'false'
             },
             sweetenPreference: {
-                value: 10
+                value: 5
             },
             smells: {
                 fire: 'false',
@@ -193,7 +193,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
                 beach: 'false'
             },
             mealType: {
-                value: 'dinner'
+                value: ''
             },
             dinnerType: {
                 chicken: 'false',
@@ -239,7 +239,7 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
 
 // create the controller and inject Angular's $scope
 wineApp.controller('quizController', function($scope, $rootScope, $location) {
-    $scope.progressValues = [0, 14, 28, 42, 57, 71, 85, 70, 85, 85, 92];
+    $scope.progressValues = [16, 32, 48, 53, 58, 63, 63, 82, 82, 82, 90];
     $scope.currentQuestion = 1;
     $scope.totalQuestions = 10;
     $scope.sliderValue = 20;
@@ -251,15 +251,15 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
             if ($scope.currentQuestion == 7) {
                 $scope.currentQuestion = 3;
                 return;
-            } else if ($scope.currentQuestion == 10) {
+            } else if ($scope.currentQuestion == 9 || $scope.currentQuestion == 10) {
                 $scope.currentQuestion = 7;
                 return;
             } else if ($scope.currentQuestion == 11) {
                 if ($rootScope.formData.isForMeal.value == 'true') {
-                    if ($rootScope.formData.dinnerType.cheese == 'true') {
+                    if ($rootScope.formData.mealType.value == 'cheese') {
                         $scope.currentQuestion = 9;
                         return;
-                    } else {
+                    } else if ($rootScope.formData.mealType.value == 'dinner') {
                         $scope.currentQuestion = 8;
                         return;
                     }
@@ -283,16 +283,14 @@ wineApp.controller('quizController', function($scope, $rootScope, $location) {
                 $scope.currentQuestion = 11;
                 return;
             } else if ($scope.currentQuestion == 7) {
-                if ($rootScope.formData.mealType.value == 'dessert') {
+                if ($rootScope.formData.mealType.value == 'cheese') {
+                    $scope.currentQuestion = 9;
+                    return;
+                } else if ($rootScope.formData.mealType.value == 'dessert') {
                     $scope.currentQuestion = 10;
                     return;
                 }
-            } else if ($scope.currentQuestion == 8) {
-                if ($rootScope.formData.dinnerType.cheese == 'false') {
-                    $scope.currentQuestion = 11;
-                    return;
-                }
-            } else if ($scope.currentQuestion == 9) {
+            } else if ($scope.currentQuestion == 8 || $scope.currentQuestion == 9) {
                 $scope.currentQuestion = 11;
                 return;
             }
