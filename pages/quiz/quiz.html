@@ -28,12 +28,22 @@
 							Red
 						</div>
 						<div range-slider floor="0" ceiling="10" highlight="left" ng-model="formData.colorPreference.red.value"></div>
-						<div>
+						<div class="col-md-12 no-padding">
+							<div class="col-md-4 col-sm-4 no-padding slider-subtitle">No, thanks</div>
+							<div class="col-md-4 col-sm-4 text-center no-padding slider-subtitle">Sure</div>
+							<div class="col-md-4 col-sm-4 no-padding text-right slider-subtitle">Please!</div>
+						</div>
+						<div class="margin-top-40">
 							White
 						</div>
 						<div range-slider floor="0" ceiling="10" highlight="left" ng-model="formData.colorPreference.white.value"></div>
+						<div class="col-md-12 no-padding">
+							<div class="col-md-4 col-sm-4 no-padding slider-subtitle">No, thanks</div>
+							<div class="col-md-4 col-sm-4 text-center no-padding slider-subtitle">Sure</div>
+							<div class="col-md-4 col-sm-4 no-padding text-right slider-subtitle">Please!</div>
+						</div>
 					</div>
-					<div class="checkbox" ng-class="formData.hasColorPreference.value === 'false' ? 'active' : ''">
+					<div class="margin-top-40 checkbox" ng-class="formData.hasColorPreference.value === 'false' ? 'active' : ''">
 					  <label><input type="checkbox" name="hasColorPreference" ng-model="formData.hasColorPreference.value" ng-true-value="'false'" ng-false-value="'true'">No preference</label>
 					</div>
 				 </form>
@@ -140,6 +150,11 @@
 			<div class="col-md-12" ng-if="currentQuestion == 5">
 				<h2>How much do you sweeten your tea?</h2>
 				<div range-slider floor="0" ceiling="10" highlight="left" ng-model="formData.sweetenPreference.value"></div>
+				<div class="col-md-12 no-padding">
+					<div class="col-md-4 col-sm-4 no-padding slider-subtitle">Never</div>
+					<div class="col-md-4 col-sm-4 text-center no-padding slider-subtitle">A little</div>
+					<div class="col-md-4 col-sm-4 no-padding text-right slider-subtitle">Some tea with my sugar</div>
+				</div>
 			</div>
 
 			<div class="col-md-12" ng-if="currentQuestion == 6">
@@ -174,18 +189,26 @@
 
 			<div class="col-md-12" ng-if="currentQuestion == 7">
 				<h2>What kind of meal?</h2>
-				<div class="col-md-6">
+				<div class="col-md-4">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.mealType.value === 'dinner' ? 'active' : ''"src="../../img/dinner.jpg">
 				  		<input type="radio" ng-model="formData.mealType.value" ng-value="'dinner'" value="'dinner'" name="mealType">Dinner
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.mealType.value === 'dinner' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-4">
 				  	<label class="clickable">
 				  		<img class="width-100-percent" ng-class="formData.mealType.value === 'dessert' ? 'active' : ''" src="../../img/dessert.jpg">
 				  		<input type="radio" ng-model="formData.mealType.value" ng-value="'dessert'" value="'dessert'" name="mealType">Dessert
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.mealType.value === 'dessert' ? 'active' : ''" aria-hidden="true"></span>
+				  	</label>
+				</div>
+
+				<div class="col-md-4">
+				  	<label class="clickable">
+				  		<img class="width-100-percent" ng-class="formData.mealType.value === 'cheese' ? 'active' : ''" src="../../img/cheese.jpg">
+				  		<input type="radio" ng-model="formData.mealType.value" ng-value="'cheese'" value="'cheese'" name="mealType">Cheese
+				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.mealType.value === 'cheese' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 			</div>
@@ -231,14 +254,6 @@
 				  		<img class="width-100-percent" ng-class="formData.dinnerType.pasta === 'true' ? 'active' : ''"src="../../img/pasta.jpg">
 				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.pasta" ng-true-value="'true'" ng-false-value="'false'">Pasta
 				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.pasta === 'true' ? 'active' : ''" aria-hidden="true"></span>
-				  	</label>
-				</div>
-
-				<div class="col-md-6">
-				  	<label class="clickable">
-				  		<img class="width-100-percent" ng-class="formData.dinnerType.cheese === 'true' ? 'active' : ''"src="../../img/cheese.jpg">
-				  		<input class="hidden-checkbox" type="checkbox" ng-model="formData.dinnerType.cheese" ng-true-value="'true'" ng-false-value="'false'">Cheese
-				  		<span class="glyphicon glyphicon-ok option-check" ng-class="formData.dinnerType.cheese === 'true' ? 'active' : ''" aria-hidden="true"></span>
 				  	</label>
 				</div>
 
@@ -305,8 +320,12 @@
 			</div>
 
 			<div class="col-md-12" ng-if="currentQuestion == 11">
-				<h2>What is your price range?</h2>
-				<div range-slider floor="5" ceiling="40" dragstop="true" ng-model-low="formData.priceRange.low" ng-model-high="formData.priceRange.high">
+				<h2>What is your price range for a bottle?</h2>
+				<div range-slider floor="5" ceiling="40" dragstop="true" ng-model-low="formData.priceRange.low" ng-model-high="formData.priceRange.high"></div>
+				<div class="col-md-12 no-padding">
+					<div class="col-md-4 col-sm-4 no-padding slider-subtitle">$5</div>
+					<div class="col-md-4 col-sm-4 text-center no-padding slider-subtitle">$22</div>
+					<div class="col-md-4 col-sm-4 no-padding text-right slider-subtitle">$40+</div>
 				</div>
 				<p>Current: ${{formData.priceRange.low}} - ${{formData.priceRange.high}}</p>
 			</div>
