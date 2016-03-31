@@ -9,6 +9,9 @@ a, a:hover {
 
 body {
 	background-color: #666;
+	background-image: url('../img/bground.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 h3 {
@@ -31,6 +34,13 @@ li {
 	Misc. Style
 */
 
+.banner {
+	width: 40%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
 .button {
 	height: 40px;
 	line-height: 40px;
@@ -48,6 +58,10 @@ li {
 
 .disabled {
 	opacity: 0.5;
+}
+
+.get-started-button {
+	margin-top: 10%;
 }
 
 .glyphicon.active {
@@ -122,11 +136,11 @@ li {
 */
 
 .other-recommendation {
-    border: 1px solid rgb(224,148,143);
-    background-color: rgb(99,20,1);
-    color: white;
-    border-radius: 10px;
-    text-align: center;
+	border: 1px solid rgb(224,148,143);
+	background-color: rgb(99,20,1);
+	color: white;
+	border-radius: 10px;
+	text-align: center;
 }
 
 .other-recommendation:hover {
@@ -155,7 +169,7 @@ li {
 }
 
 .white-wine {
-	color: rgb(206,122,83);
+	color: rgb(255,179,174);
 }
 
 /*
