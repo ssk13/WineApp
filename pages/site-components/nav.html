@@ -8,20 +8,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#home">Half-Corked<img class="logo" src="../../img/logo.png"></a>
+      <div class="clickable" ng-click="routeTo('/home')">Half-Corked<img class="logo" src="../../img/logo.png"></div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#learn">Learn About Wine</a></li>
+        <li class="clickable" ng-click="routeTo('/learn')">Learn About Wine</li>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-if="isLoggedIn == false;">
-        <li><a href="#login">Log In</a></li>
+        <li class="clickable" ng-click="routeTo('/login')">Log In</li>
       </ul>
       <ul class="nav navbar-nav navbar-right" ng-if="isLoggedIn == true;">
-        <li><a href="#taste">View/Edit Taste Profile</a></li>
-        <li><a ng-click="logOut();">Log Out</a></li>
+        <li class="clickable" ng-click="routeTo('/taste')">View/Edit Taste Profile</li>
+        <li class="clickable" ng-click="logOut()">Log Out</li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
