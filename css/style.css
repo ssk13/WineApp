@@ -7,6 +7,10 @@ a, a:hover {
 	color: rgb(99,20,1);
 }
 
+b {
+	color: rgb(99,20,1);
+}
+
 body {
 	background-color: #666;
 	background-image: url('../img/bground.JPG');
@@ -19,6 +23,10 @@ h3 {
 	color: rgb(99,20,1);
 }
 
+i {
+	color: rgb(99,20,1);
+}
+
 img.active {
 	box-shadow: 0px 0 15px rgb(99,20,1);
 }
@@ -27,9 +35,31 @@ input[type="radio"], input[type="checkbox"].hidden-checkbox {
 	visibility: hidden;
 }
 
+label img {
+	border: 2px solid rgb(99,20,1);
+}
+
 li {
 	font-size: 16px;
 }
+
+nav {
+	opacity: 0.6;
+}
+
+nav:hover {
+	opacity: 1.0;
+}
+
+nav .clickable {
+	padding: 0px 5px;
+	line-height: 52px;
+}
+
+nav .clickable:hover {
+	background-color: rgb(224,148,143);
+}
+
 
 /*
 	Misc. Style
@@ -55,23 +85,6 @@ li {
 	cursor: pointer;
 }
 
-nav {
-	opacity: 0.6;
-}
-
-nav:hover {
-	opacity: 1.0;
-}
-
-nav .clickable {
-	padding: 0px 5px;
-	line-height: 52px;
-}
-
-nav .clickable:hover {
-	background-color: rgb(224,148,143);
-}
-
 .disabled {
 	opacity: 0.5;
 }
@@ -91,10 +104,6 @@ nav .clickable:hover {
 
 .glyphicon-large {
 	font-size: 80px;
-}
-
-label img {
-	border: 2px solid rgb(99,20,1);
 }
 
 .margin-top-40 {
