@@ -12,6 +12,7 @@ body {
 	background-image: url('../img/bground.JPG');
 	background-size: cover;
 	background-repeat: no-repeat;
+	font-size: 18px;
 }
 
 h3 {
@@ -92,8 +93,16 @@ nav .clickable:hover {
 	font-size: 80px;
 }
 
+label img {
+	border: 2px solid rgb(99,20,1);
+}
+
 .margin-top-40 {
 	margin-top: 40px;
+}
+
+.margin-top-140 {
+	margin-top: 140px;
 }
 
 .middle-button {
@@ -115,6 +124,10 @@ nav .clickable:hover {
 
 .option-check.active {
 	display: block;
+}
+
+.padding-bottom-50 {
+	padding-bottom: 50px;
 }
 
 .round-corners {
@@ -208,13 +221,12 @@ nav .clickable:hover {
 }
 
 .white-wine {
-	color: rgb(255,179,174);
+	color: #555;
 }
 
 /*
 	Colors
 */
-
 
 .black {
 	background-color: black;
@@ -262,4 +274,24 @@ nav .clickable:hover {
 
 .yellow-text {
 	color: rgb(206,122,83);
+}
+
+.gradient-red {
+	background-image: linear-gradient( rgb(99,20,1), rgba(0,0,0,0) );
+}
+
+.gradient-yellow {
+	background-image: linear-gradient( rgb(206,122,83), rgba(0,0,0,0) );
+}
+
+.gradient-yellow-to-white {
+	background-image: linear-gradient( rgba(206,122,83,.8), rgba(255,255,255,.8) );
+}
+
+.transparent-white {
+	background-color: rgba(255,255,255, .8);
+}
+
+.gradient-white {
+	background-image: linear-gradient( rgb(255,255,255), rgba(0,0,0,0) );
 }
