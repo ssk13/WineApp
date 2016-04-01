@@ -1,5 +1,8 @@
 <img class="banner" src="../../img/logoname.png">
 
-<div class="other-recommendation col-md-2 col-md-offset-5 get-started-button button clickable" data-toggle="modal" data-target="#infographic">Get Started</div>
+<div ng-if="isLoggedIn == true;" class="other-recommendation col-md-2 col-md-offset-5 get-started-button button clickable" ng-click="routeTo('/quiz')">Get Started<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+</div>
+
+<div ng-if="isLoggedIn == false;" class="other-recommendation col-md-2 col-md-offset-5 get-started-button button clickable" data-toggle="modal" data-target="#infographic">Get Started<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
 
 <div ng-include src="'pages/site-components/modals/getstarted.html'"></div>

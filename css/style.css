@@ -35,10 +35,8 @@ li {
 */
 
 .banner {
-	width: 40%;
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
+	width: 50%;
+	margin-left: 25%;
 }
 
 .button {
@@ -56,12 +54,34 @@ li {
 	cursor: pointer;
 }
 
+nav {
+	opacity: 0.6;
+}
+
+nav:hover {
+	opacity: 1.0;
+}
+
+nav .clickable {
+	padding: 0px 5px;
+	line-height: 52px;
+}
+
+nav .clickable:hover {
+	background-color: rgb(224,148,143);
+}
+
 .disabled {
 	opacity: 0.5;
 }
 
 .get-started-button {
-	margin-top: 10%;
+	border: 2px solid rgb(224,148,143) !important;
+	padding: 10px;
+	height: 60px;
+	font-size: 24px;
+	line-height: 40px;
+	margin-top: 10px;
 }
 
 .glyphicon.active {
@@ -74,6 +94,10 @@ li {
 
 .margin-top-40 {
 	margin-top: 40px;
+}
+
+.middle-button {
+	margin: 0px 5px;
 }
 
 .no-padding {
@@ -166,7 +190,8 @@ li {
 }
 
 .wineA {
-	width: 100%;
+	width: 70%;
+	margin-left: 15%;
 }
 
 /*
