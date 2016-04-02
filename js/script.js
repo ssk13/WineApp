@@ -220,6 +220,13 @@ wineApp.controller('mainController', ['$scope', '$rootScope', '$location',
             return;
         };
 
+        $scope.getColor = function(value) {
+            if (value == 'cabernetsauvignon' || value == 'malbec' || value == 'merlot' || value == 'pinotnoir' || value == 'zinfandel') {
+                return 'red';
+            }
+            return 'white';
+        }
+
         $scope.logIn = function() {
             $rootScope.isLoggedIn = true;
             $location.path("/home");
